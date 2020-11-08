@@ -10,10 +10,7 @@ class ShowOrderDetailsScreen extends StatefulWidget {
 }
 
 class _ShowOrderDetailsScreenState extends State<ShowOrderDetailsScreen> {
-  Size screenSize() =>
-      MediaQuery
-          .of(context)
-          .size;
+  Size screenSize() => MediaQuery.of(context).size;
 
   @override
   Widget build(BuildContext context) {
@@ -33,36 +30,71 @@ class _ShowOrderDetailsScreenState extends State<ShowOrderDetailsScreen> {
             SizedBox(
               height: 25,
             ),
-
             Container(
               width: screenSize().width,
               height: 1,
               color: Colors.blueGrey.withOpacity(0.1),
             ),
-
             getinformation(
-              name1: 'تحویل گیرنده',
-              title1: 'حسین سوهان',
-              title2: 'تاریخ ثبت سفارش',
-              name2: '1399/08/07'
-            ),
+                name1: 'تحویل گیرنده',
+                title1: 'حسین سوهان',
+                title2: 'تاریخ ثبت سفارش',
+                name2: '1399/08/07'),
             getinformation(
                 name1: 'شماره تماس',
                 title1: '09016718255',
                 title2: 'مبلغ کل',
-                name2: '9500 تومان'
-            ),
+                name2: '9500 تومان'),
             getinformation(
                 name1: 'نحوه پرداخت',
                 title1: 'پرداخت اینترنتی',
                 title2: 'کد سفارش',
-                name2: 'DKC-142563255'
-            ),
+                name2: 'DKC-142563255'),
             getinformation(
-                name1: 'امتیاز مرسی کالا',
-                title1: '1 امتیاز',
+              name1: 'امتیاز مرسی کالا',
+              title1: '1 امتیاز',
             ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: OutlineButton(
+                padding: const EdgeInsets.all(8.0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                              text: 'نام آدرس  ',
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w700,
+                                  fontFamily: fontIRANSans,
+                                  fontSize: 14),
+                              children: <TextSpan>[
 
+
+                              ]),
+                        ),
+                        Text('خیام جنوبی، ارومیه / آذربایجان غربی', style: TextStyle(
+                          fontSize: 13,
+                          fontFamily: fontIRANSans,
+                          fontWeight: FontWeight.w500
+                        ),)
+                      ],
+                    ),
+                    TopDownWidget()
+                  ],
+                ),
+              ),
+            ),
             SizedBox(
               height: 20,
             ),
@@ -92,7 +124,7 @@ class _ShowOrderDetailsScreenState extends State<ShowOrderDetailsScreen> {
               ]
                   .map(
                     (e) => DeliveryBoxWidget(),
-              )
+                  )
                   .toList(),
             ),
             Container(
@@ -151,33 +183,35 @@ class _ShowOrderDetailsScreenState extends State<ShowOrderDetailsScreen> {
     );
   }
 
-  Widget getinformation({String title1,
+  Widget getinformation({
+    String title1,
     String name1,
     String title2,
-    String name2,}) {
+    String name2,
+  }) {
     return Column(
       children: [
         Row(
           children: [
             Expanded(
                 child: Column(
-                  children: [
-                    Text(
-                      title1,
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: fontIRANSans,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    Text(
-                      name1,
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: fontIRANSans,
-                          fontWeight: FontWeight.w500),
-                    )
-                  ],
-                )),
+              children: [
+                Text(
+                  title1,
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: fontIRANSans,
+                      fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  name1,
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: fontIRANSans,
+                      fontWeight: FontWeight.w500),
+                )
+              ],
+            )),
             Container(
               width: 1,
               height: 75,
@@ -185,23 +219,23 @@ class _ShowOrderDetailsScreenState extends State<ShowOrderDetailsScreen> {
             ),
             Expanded(
                 child: Column(
-                  children: [
-                    Text(
-                      title2??'',
-                      style: TextStyle(
-                          fontSize: 12,
-                          fontFamily: fontIRANSans,
-                          fontWeight: FontWeight.w300),
-                    ),
-                    Text(
-                      name2??'',
-                      style: TextStyle(
-                          fontSize: 14,
-                          fontFamily: fontIRANSans,
-                          fontWeight: FontWeight.w700),
-                    )
-                  ],
-                ))
+              children: [
+                Text(
+                  title2 ?? '',
+                  style: TextStyle(
+                      fontSize: 12,
+                      fontFamily: fontIRANSans,
+                      fontWeight: FontWeight.w300),
+                ),
+                Text(
+                  name2 ?? '',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontFamily: fontIRANSans,
+                      fontWeight: FontWeight.w700),
+                )
+              ],
+            ))
           ],
         ),
         Container(

@@ -4,6 +4,7 @@ import 'package:mercikala/src/ui/widgets/userComment/ProductComment.dart';
 import 'package:mercikala/src/ui/widgets/userComment/ProductName.dart';
 import 'package:mercikala/src/ui/widgets/userComment/ScoreChart.dart';
 import 'package:mercikala/src/ui/widgets/userComment/WaitingForAccept.dart';
+import 'package:mercikala/src/utils/font.dart';
 
 class ShowUserCommentScreen extends StatefulWidget {
   @override
@@ -15,7 +16,13 @@ class _ShowUserCommentScreenState extends State<ShowUserCommentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Demo'),
+        centerTitle: true,
+        title: Text('نظر های من',
+        style: TextStyle(
+          fontFamily: fontIRANSans,
+          fontSize: 16,
+          fontWeight: FontWeight.w500
+        ),),
       ),
       body: ListView(
         children: [

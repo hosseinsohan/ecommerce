@@ -5,6 +5,9 @@ import 'package:mercikala/src/ui/widgets/profile/profile_widget.dart';
 import 'package:mercikala/src/utils/font.dart';
 
 class ProfileScreen extends StatefulWidget {
+
+  final Function callBack;
+  ProfileScreen({this.callBack});
   @override
   _ProfileScreenState createState() => _ProfileScreenState();
 }
@@ -61,7 +64,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           SliverList(
               delegate: SliverChildBuilderDelegate(
             (context, index) {
-              return GetProfileScreen();
+              return GetProfileScreen(callBack: widget.callBack,);
             },
             childCount: 1,
           ))
