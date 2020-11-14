@@ -14,12 +14,15 @@ class _SelerPriceState extends State<SelerPrice> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'دیگر فروشندگان (71)',
-          style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontFamily: fontIRANSans,
-              fontSize: 13),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Text(
+            'دیگر فروشندگان (71)',
+            style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontFamily: fontIRANSans,
+                fontSize: 13),
+          ),
         ),
         SizedBox(
           height: 10,
@@ -37,7 +40,8 @@ class _SelerPriceState extends State<SelerPrice> {
               67,
             ]
                 .map((e) => Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      padding:  EdgeInsets.only(left: 5, right: e==1?16: 5),
+
                       child: selerItem(),
                     ))
                 .toList(),

@@ -91,7 +91,7 @@ class _ProductDetailsState extends State<ProductDetails>
                                 topLeft: Radius.circular(35),
                                 topRight: Radius.circular(35),
                               )),
-                          padding: EdgeInsets.symmetric(horizontal: 16),
+                         // padding: EdgeInsets.symmetric(horizontal: 16),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -127,86 +127,101 @@ class _ProductDetailsState extends State<ProductDetails>
                                   ),
                                 ),
                               ),
-                              Text("سامسونگ",
-                                  style: TextStyle(
-                                      color: Colors.indigo,
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: fontIRANSans,
-                                      fontSize: 13)),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 32),
+                                child: Text("سامسونگ",
+                                    style: TextStyle(
+                                        color: Colors.indigo,
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: fontIRANSans,
+                                        fontSize: 13)),
+                              ),
                               SizedBox(
                                 height: 10,
                               ),
-                              Text(
-                                  'گوشی سامسونگ گلگسی نوت 10 لایت 128 گیگ (گارانتی نمایندگی سامسونگ)',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w700,
-                                    fontSize: 15,
-                                    fontFamily: fontIRANSans,
-                                  )),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16),
+                                child: Text(
+                                    'گوشی سامسونگ گلگسی نوت 10 لایت 128 گیگ (گارانتی نمایندگی سامسونگ)',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 15,
+                                      fontFamily: fontIRANSans,
+                                    )),
+                              ),
                               SizedBox(
                                 height: 20,
                               ),
-                              Row(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    '4.8',
-                                    strutStyle: StrutStyle(
-                                      height: 1.8,
-                                    ),
-                                    style: TextStyle(
-                                      color: Colors.black54,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: fontIRANSans,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star,
-                                    color: Color(0xFFFF9529),
-                                  ),
-                                  SizedBox(
-                                    width: 15,
-                                  ),
-                                  Text(
-                                    'تعداد کل رای (156)',
-                                    strutStyle: StrutStyle(
-                                      height: 1.8,
-                                    ),
-                                    style: TextStyle(
-                                      color: Colors.black54,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500,
-                                      fontFamily: fontIRANSans,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Divider(),
-                              SizedBox(
-                                height: 10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'فروشنده',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w700,
-                                      fontFamily: fontIRANSans,
-                                      fontSize: 15
-                                    ),
-                                  ),
-                                  Text("حسین سوهان",
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      '4.8',
+                                      strutStyle: StrutStyle(
+                                        height: 1.8,
+                                      ),
                                       style: TextStyle(
-                                          color: Colors.indigo, fontSize: 14,fontWeight: FontWeight.w700,
-                                          fontFamily: fontIRANSans,
-                                          )),
-                                ],
+                                        color: Colors.black54,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: fontIRANSans,
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.star,
+                                      color: Color(0xFFFF9529),
+                                    ),
+                                    SizedBox(
+                                      width: 15,
+                                    ),
+                                    Text(
+                                      'تعداد کل رای (156)',
+                                      strutStyle: StrutStyle(
+                                        height: 1.8,
+                                      ),
+                                      style: TextStyle(
+                                        color: Colors.black54,
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w500,
+                                        fontFamily: fontIRANSans,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                child: Divider(),
+                              ),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'فروشنده',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: fontIRANSans,
+                                        fontSize: 15
+                                      ),
+                                    ),
+                                    Text("حسین سوهان",
+                                        style: TextStyle(
+                                            color: Colors.indigo, fontSize: 14,fontWeight: FontWeight.w700,
+                                            fontFamily: fontIRANSans,
+                                            )),
+                                  ],
+                                ),
                               ),
                               SizedBox(
                                 height: 10,

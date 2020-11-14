@@ -4,6 +4,7 @@ import 'package:mercikala/main.dart';
 import 'package:mercikala/src/ui/screen/category.dart';
 import 'package:mercikala/src/ui/screen/checkout.dart';
 import 'package:mercikala/src/ui/screen/edit_profile.dart';
+import 'package:mercikala/src/ui/screen/favorite.dart';
 import 'package:mercikala/src/ui/screen/login_screen.dart';
 import 'package:mercikala/src/ui/screen/product_details.dart';
 import 'package:mercikala/src/ui/screen/product_list_filter.dart';
@@ -27,6 +28,7 @@ class RouteGenerator {
       case '/home': return MaterialPageRoute(builder: (_)=>MyHomePage());
       case '/editProfile': return MaterialPageRoute(builder: (_)=>EditProfileScreen());
       case '/showUserComment': return MaterialPageRoute(builder: (_)=>ShowUserCommentScreen());
+      case '/favoriteScreen': return MaterialPageRoute(builder: (_)=>FavoriteScreen());
       default: return MaterialPageRoute(builder: (_)=>MyHomePage());
     }
   }

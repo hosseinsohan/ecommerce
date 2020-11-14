@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:mercikala/src/utils/font.dart';
 
 class ProductName extends StatelessWidget {
   String productName;
@@ -12,7 +13,8 @@ class ProductName extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('ثبت شده در محصول:'),
+          Text('ثبت شده در محصول:',
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 15, fontFamily: fontIRANSans, color: Color(0xFF000000)),),
           Text(
             productName,
             style: TextStyle(fontWeight: FontWeight.bold),

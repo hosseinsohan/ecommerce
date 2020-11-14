@@ -4,6 +4,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mercikala/src/utils/font.dart';
 
 class GetProfileScreen extends StatefulWidget {
+  final Function callBack;
+  GetProfileScreen({this.callBack});
   @override
   _GetProfileScreenState createState() => _GetProfileScreenState();
 }
@@ -125,11 +127,15 @@ class _GetProfileScreenState extends State<GetProfileScreen> {
           color: Colors.blueGrey.withOpacity(0.1),
         ),
         SizedBox(height: 25),
-        listItem(CupertinoIcons.person, 'ویرایش پروفایل', null, onTab: () {
+        listItem(CupertinoIcons.person, 'اطلاعات حساب کاربری', null, onTab: () {
           Navigator.pushNamed(context, '/editProfile');
         }),
-        listItem(CupertinoIcons.heart, 'لیست علاقه مندی ها', null),
-        listItem(CupertinoIcons.cube_box, 'سفارش ها', null),
+        listItem(CupertinoIcons.heart, 'لیست علاقه مندی ها', null, onTab: (){
+          Navigator.pushNamed(context, '/favoriteScreen');
+        }),
+        listItem(CupertinoIcons.cube_box, 'سفارش ها', null, onTab: (){
+          widget.callBack(3);
+        }),
         listItem(CupertinoIcons.chat_bubble, 'نظرات من', null,onTab: (){
           Navigator.pushNamed(context, '/showUserComment');
         }),

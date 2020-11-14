@@ -71,9 +71,16 @@ class _MyHomePageState extends State<MyHomePage> {
       case 1: return CategoryScreen();break;
       case 2: return CartScreen();break;
       case 3: return ShowOrders();break;
-      case 4: return ProfileScreen();break;
+      case 4: return ProfileScreen(callBack: callBack,);break;
       default: return Container();
     }
+  }
+
+
+  Widget callBack(int index){
+    setState(() {
+      selectedIndex = index;
+    });
   }
 
   @override
